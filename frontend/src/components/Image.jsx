@@ -1,11 +1,10 @@
-import React from 'react'
-import { Image } from '@imagekit/react'
+import { Image as IKImage } from '@imagekit/react'
 
 
 const Image = ({ src, className, w, h, alt }) => {
     return (
 
-        < Image
+        <IKImage
             urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT}
             src={src}
             className={className}
@@ -13,6 +12,7 @@ const Image = ({ src, className, w, h, alt }) => {
             height={h}
             alt={alt}
             loading="lazy"
+            lqip={{ active: true, quality: 20 }}
         />
 
     )

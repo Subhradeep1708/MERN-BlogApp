@@ -2,6 +2,7 @@ import { Image } from '@imagekit/react'
 import { useState } from 'react'
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import LoginBtn from './LoginBtn';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
     return (
         <div className='w-full md:h-20 flex items-center justify-between px-8 py-8 backdrop-blur-md'>
             {/* LOGO */}
-            <div className=" flex items-center gap-4 font-bold text-2xl ">
+            <Link to={'/'} className=" flex items-center gap-4 font-bold text-2xl ">
                 <img src="./logo2.svg" alt="Logo" className='w-9 h-9' />
                 <Image
                     // urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT}
@@ -26,7 +27,7 @@ const Navbar = () => {
                     alt="Picture of the author"
                 />
                 <span>Blogspace.</span>
-            </div>
+            </Link>
             {/* Mobile Menu*/}
             <div className="md:hidden">
                 {/* <div className="cursor-pointer text-4xl" onClick={() => setOpen((prev) => !prev)}>
@@ -49,27 +50,18 @@ const Navbar = () => {
 
                 {/* Mobile Links List */}
                 <div className={`w-full h-screen bg-[#e6e6ff] items-center justify-center gap-8 font-medium text-lg absolute top-18 transition-all ease-in-out duration-700 ${open ? "right-0 flex flex-col  " : "opacity-0 hidden"} backdrop-blur-3xl `}>
-                    {navbarLinks.map((id, name, href) => (
-                        <a href={href} key={id}>{name}</a>
+                    {navbarLinks.map((nav) => (
+                        <Link to={nav.href} key={nav.id}>{nav.name}</Link>
                     ))}
-                    {/* <a href="/">Home</a>
-                    <a href="/">Trending</a>
-                    <a href="/">Most Popular</a>
-                    <a href="/">About</a> */}
                     <LoginBtn />
                 </div>
             </div>
 
             {/* Desktop Menu*/}
             <div className="hidden md:flex items-center gap-8 xl:gap-12 font-semibold ">
-                {/* <a href="/" className='hover:underline duration-900 transform  transition-transform'>Home</a> */}
                 {navbarLinks.map((nav) => (
-                    <a href={nav.href} key={nav.id} className='duration-700 transform  transition-transform hover:scale-110'>{nav.name}</a>
+                    <Link to={nav.href} key={nav.id} className='duration-900 transform transition-transform hover:scale-110'>{nav.name}</Link>
                 ))}
-                {/* <a href="/">Home</a>
-                <a href="/">Trending</a>
-                <a href="/">Most Popular</a>
-                <a href="/">About</a> */}
                 <LoginBtn />
             </div>
         </div>
