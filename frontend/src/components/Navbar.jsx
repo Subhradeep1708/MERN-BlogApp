@@ -60,7 +60,7 @@ const Navbar = () => {
             {/* Desktop Menu*/}
             <div className="hidden md:flex items-center gap-8 xl:gap-12 font-semibold ">
                 {navbarLinks.map((nav) => (
-                    <Link to={nav.href} key={nav.id} className='duration-900 transform transition-transform hover:scale-110'>{nav.name}</Link>
+                    <Link to={nav.href} key={nav.id} className='duration-900 transform transition-transform hover:scale-105'>{nav.name}</Link>
                 ))}
                 <LoginBtn />
             </div>
