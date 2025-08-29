@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
 import MainCategory from '../components/MainCategory'
 import FeaturedPost from '../components/FeaturedPost'
+import PostList from '../components/PostList'
 
 const Homepage = () => {
     return (
@@ -67,6 +68,12 @@ const Homepage = () => {
             {/* Featured Post */}
             <FeaturedPost/>
             {/* Post List */}
+            <div className="">
+                <h1 className="my-8 text-2xl text-gray-600 font-semibold">
+                    Recent Posts
+                </h1>
+                <PostList/>
+            </div>
         </div>
     )
 }

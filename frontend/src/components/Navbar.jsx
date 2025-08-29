@@ -15,7 +15,7 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false)
     return (
-        <div className='w-full md:h-20 flex items-center justify-between'>
+        <div className='w-full p-4 md:p-0 md:h-20 flex items-center justify-between'>
             {/* LOGO */}
             <Link to={'/'} className=" flex items-center gap-4 font-bold text-2xl ">
                 <img src="./logo2.svg" alt="Logo" className='w-9 h-9' />
