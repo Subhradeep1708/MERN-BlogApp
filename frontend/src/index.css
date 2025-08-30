@@ -12,3 +12,25 @@ body {
 .animatedButton {
   animation-duration: 15000ms;
 }
+
+.ql-container{
+  border:none !important;
+}
+.ql-toolbar{
+  border:none !important;
+}
+.ql-editor{
+  border:none !important;
+}
+
+select option {
+  @apply bg-white text-gray-700 ;
+}
+
+select option:checked {
+  @apply bg-blue-100 text-blue-700;
+}
+
+select option:hover {
+  background-color: #e5e7eb;
+}

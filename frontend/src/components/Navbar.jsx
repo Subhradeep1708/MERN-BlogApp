@@ -29,7 +29,7 @@ const Navbar = () => {
                 <span>Blogspace.</span>
             </Link>
             {/* Mobile Menu*/}
-            <div className="md:hidden">
+            <div className="z-10 md:hidden">
                 {/* <div className="cursor-pointer text-4xl" onClick={() => setOpen((prev) => !prev)}>
                     {open ? <RxCross1 /> : <RxHamburgerMenu />
 }
