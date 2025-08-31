@@ -35,7 +35,7 @@ const Write = () => {
                 </div>
                 <textarea className='rounded-xl p-4 bg-white shadow-md outline-none' name="desc" id="" placeholder='A short Description'></textarea>
                 <ReactQuill theme="snow" className='flex-1 rounded-xl p-2 bg-white shadow-md outline-none border-none'/>
-                <button className='px-6 py-2 shadow-md rounded-xl text-sm text-white bg-blue-600 w-max hover:bg-blue-700'>Post</button>
+                <button className='px-6 py-2 mb-8 shadow-md rounded-xl text-sm text-white bg-blue-600 w-max hover:bg-blue-700'>Post</button>
             </form>
         </div>
     )
